@@ -1,0 +1,16 @@
+.header{
+    background: linear-gradient(180deg, #1A1813 0%, rgba(68, 106, 81, 0.964033) 11.6%, rgba(79, 238, 181, 0.69) 100%);
+    width: 840px;
+    height: 1112px;
+    color: white;
+    padding:90px;
+    
+}
+.image{
+    margin-top: 400px;
+    height: 90px;
+    border-radius: 200px;
+}
+.titleB{
+    margin-top:800px;
+}
