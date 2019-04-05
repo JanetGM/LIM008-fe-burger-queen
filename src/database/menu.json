@@ -3,25 +3,25 @@
     "id":1,
     "name":"café americano",
     "categoria":"bebida-mañana",
-    "price":5.00,
+    "precio":5.00,
     "image":""
   },
   {  "id":2,
     "name":"cafe con leche",
     "categoria":"bebida-mañana",
-    "price":7.00,
+    "precio":7.00,
     "image":""
   },
   {  "id":3,
     "name":"sandwich de jamón y queso",
     "categoria":"sandwich",
-    "price":10.00,
+    "precio":10.00,
     "image":""
   },
   {  "id":4,
     "name":"Jugo de frutas natural",
     "categoria":"bebidas-mañana",
-    "price":7.00,
+    "precio":7.00,
     "image":""
   }
   ,
