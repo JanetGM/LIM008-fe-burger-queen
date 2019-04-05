@@ -1,78 +1,80 @@
 {
   "desayuno":[
-    {
+    {  "id":1,
     "name":"café americano",
     "categoria":"bebida",
     "price":5.00,
     "image":""
   },
-  {
+  {  "id":2,
     "name":"cafe con leche",
     "categoria":"bebida",
     "price":7.00,
     "image":""
   },
-  {
+  {  "id":3,
     "name":"sandwich de jamón y queso",
     "categoria":"sandwich",
     "price":10.00,
     "image":""
   },
-  {
+  {  "id":4,
     "name":"Jugo de frutas natural",
     "categoria":"bebidas",
     "price":7.00,
     "image":""
   }
   ],
-  "almuerzo-cena":[{
+  "almuerzo-cena":[
+  {  "id":5,
     "name":"hamburguesa simple",
     "categoria":"hamburguesa",
     "precio":10.00,
     "image":""
   },
-  {
+  {  "id":6,
     "name":"hamburguesa doble",
     "categoria":"hamburguesa",
     "precio":15.00,
     "image":""
   },
-  {
+  {  "id":7,
       "name":"papas fritas",
       "categoria":"acompañamiento",
       "precio":5,
       "image":""
   },
-  {
+  {  "id":8,
     "name":"aros de cebolla",
     "categoria":"acompañamiento",
     "precio":5,
     "image":""
   },
-  {
+  {  "id":9,
     "name":"agua 500ml",
     "categoria":"bebida",
     "precio":5,
     "image":""
   },
-  {
+  {  "id":10,
     "name":"agua 750ml",
     "categoria":"bebida",
     "precio":7,
     "image":""
   },  
   {
+    "id":11,
     "name":"bebida/gaseosa 500ml",
     "categoria":"bebida",
     "precio":7,
     "image":""
   },
   {
+    "id":12,
     "name":"bebida/gaseosa 750ml",
     "categoria":"bebida",
     "precio":10,
     "image":""
   }
   ]
-
 }

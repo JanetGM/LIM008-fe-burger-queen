@@ -21,7 +21,7 @@ constructor(){
 }
 
 componentDidMount(){
-  fetch('http://hp-api.herokuapp.com/api/characters')
+  fetch('https://raw.githubusercontent.com/JanetGM/LIM008-fe-burger-queen/devJanet/src/database/menu.json')
   .then(res => res.json())
   .then(json =>{
     this.setState({
@@ -34,13 +34,17 @@ componentDidMount(){
   render() {
     let {isLoaded,items}=this.state;
     if(!isLoaded){
-      return <div>Loading...</div>;
+      return <div>Loading..hay problemas con la data beibi.</div>;
     } 
     else {
   
     return (
       <div className="App">
-        data has been workeed
+        <ul>
+          {items.map(item => {
+            <li key={item.id}></li>
+          })};
+        </ul>
       </div>
     );
   }
