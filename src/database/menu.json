@@ -1,14 +1,14 @@
-{
-  "desayuno":[
-    {  "id":1,
+[
+    {
+    "id":1,
     "name":"café americano",
-    "categoria":"bebida",
+    "categoria":"bebida-mañana",
     "price":5.00,
     "image":""
   },
   {  "id":2,
     "name":"cafe con leche",
-    "categoria":"bebida",
+    "categoria":"bebida-mañana",
     "price":7.00,
     "image":""
   },
@@ -20,12 +20,11 @@
   },
   {  "id":4,
     "name":"Jugo de frutas natural",
-    "categoria":"bebidas",
+    "categoria":"bebidas-mañana",
     "price":7.00,
     "image":""
   }
-  ],
-  "almuerzo-cena":[
+  ,
   {  "id":5,
     "name":"hamburguesa simple",
     "categoria":"hamburguesa",
@@ -52,29 +51,28 @@
   },
   {  "id":9,
     "name":"agua 500ml",
-    "categoria":"bebida",
+    "categoria":"bebida-tarde",
     "precio":5,
     "image":""
   },
   {  "id":10,
     "name":"agua 750ml",
-    "categoria":"bebida",
+    "categoria":"bebida-tarde",
     "precio":7,
     "image":""
   },  
   {
     "id":11,
     "name":"bebida/gaseosa 500ml",
-    "categoria":"bebida",
+    "categoria":"bebida-tarde",
     "precio":7,
     "image":""
   },
   {
     "id":12,
     "name":"bebida/gaseosa 750ml",
-    "categoria":"bebida",
+    "categoria":"bebida-tarde",
     "precio":10,
     "image":""
   }
-  ]
-}
+]
