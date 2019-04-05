@@ -40,6 +40,7 @@ componentDidMount(){
   
     return (
       <div className="App">
+       <Pedido/>
         <Breakfast menuBreakfast={this.state.items}/>
       </div>
     );
