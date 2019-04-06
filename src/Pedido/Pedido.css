@@ -1,0 +1,12 @@
+.nav-menu{
+    text-decoration: none;
+    color:black;
+    margin-left:30px;
+    padding: 40px;
+    background-color: rgba(66, 141, 116, 0.794);
+    margin-bottom: 300px;
+    margin-top:30px;
+}
+.name-client{
+    margin-top:50px;
+}

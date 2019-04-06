@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import './Pedido.css';
-  
+// import Example from '../pruebaHooks/HooksP';
+
 class Pedido extends Component{
-    constructor(props){
-        super(props);
-        this.noteContent= props.noteContent;
-        this.noteId=props.noteId;
-    }
+ 
 
 render(){
+    // console.log(data);
     return(
     <div className="Pedido">
-    <label>Nombre del Cliente :</label>
-    <input type="text"/>
+    <nav>
+        <a  className="nav-menu"   href="#">  BreakFast</a>
+        <a  className="nav-menu" href="#">Launch-Dinner</a>
+    </nav>
+        <div className="name-client">
+            <label> Nombre del Cliente : </label>
+            <input type="text"/>
+        </div>
+    
     </div>
     ) 
   }

@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import Breakfast from './Breakfast/Breakfast';
-import './App.css';
-
-import firebase from 'firebase';
-import {DB_CONFIG} from './config/config';
 import Pedido from './Pedido/Pedido';
-import PedidoForm from './PedidoForm/PedidoForm';
-import Home from './Home/Home';
-import 'firebase/database';
+import './App.css';
+import Aumentar from './pruebaHooks/Aumentar';
+
 
 
 class App extends Component {
@@ -31,21 +27,24 @@ componentDidMount(){
   });
 }
 
+
   render() {
     let {isLoaded,items}=this.state;
     if(!isLoaded){
       return <div>Loading..hay problemas con la data beibi.</div>;
     } 
     else {
-  
     return (
       <div className="App">
-       <Pedido/>
-        <Breakfast menuBreakfast={this.state.items}/>
+      <Aumentar/>
+       {/* <Pedido data={this.state.items}/>
+       <Breakfast menuBreakfast={this.state.items}/> */}
       </div>
+
     );
   }
 }
+
 }
 
 export default App;
