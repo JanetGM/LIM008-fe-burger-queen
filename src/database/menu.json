@@ -4,75 +4,88 @@
     "name":"café americano",
     "category":"bebida-mañana",
     "price":5.00,
-    "image":""
+    "image":"",
+    "turn":"moorning"
+    
   },
   {  "id":2,
     "name":"cafe con leche",
     "category":"bebida-mañana",
     "price":7.00,
-    "image":""
+    "image":"",
+    "turn":"moorning"
   },
   {  "id":3,
     "name":"sandwich de jamón y queso",
     "category":"sandwich",
     "price":10.00,
-    "image":""
+    "image":"",
+    "turn":"moorning"
   },
   {  "id":4,
     "name":"Jugo de frutas natural",
     "category":"bebidas-mañana",
     "price":7.00,
-    "image":""
+    "image":"",
+    "turn":"moorning"
   }
   ,
   {  "id":5,
     "name":"hamburguesa simple",
     "category":"hamburguesa",
     "price":10.00,
-    "image":""
+    "image":"",
+    "turn":"AfternoonNight"
   },
   {  "id":6,
     "name":"hamburguesa doble",
     "category":"hamburguesa",
     "price":15.00,
-    "image":""
+    "image":"",
+    "turn":"AfternoonNight"
   },
   {  "id":7,
       "name":"papas fritas",
       "category":"acompañamiento",
       "price":5,
-      "image":""
+      "image":"",
+      "turn":"AfternoonNight"
   },
   {  "id":8,
     "name":"aros de cebolla",
     "category":"acompañamiento",
     "price":5,
-    "image":""
+    "image":"",
+    "turn":"AfternoonNight"
   },
   {  "id":9,
     "name":"agua 500ml",
     "category":"bebida-tarde",
     "price":5,
-    "image":""
+    "image":"",
+    "turn":"AfternoonNight"
   },
   {  "id":10,
     "name":"agua 750ml",
     "category":"bebida-tarde",
     "price":7,
-    "image":""
+    "image":"",
+    "turn":"AfternoonNight"
   },  
   {
     "id":11,
     "name":"bebida/gaseosa 500ml",
     "category":"bebida-tarde",
     "price":7,
-    "image":""
+    "image":"",
+    "turn":"AfternoonNight"
   },
   {
     "id":12,
     "name":"bebida/gaseosa 750ml",
     "category":"bebida-tarde",
     "precio":10,
-    "image":""
+    "image":"",
+    "turn":"AfternoonNight"
   }
 ]
