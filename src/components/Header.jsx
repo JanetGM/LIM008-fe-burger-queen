@@ -8,7 +8,7 @@ import header from '../components/header.css';
                 <label className="display-4">BurguerQueen</label>
         </div>
             
-        <div clasName="col">
+        <div className="col">
 
         </div>
             

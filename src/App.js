@@ -24,7 +24,11 @@ return(
   <div>
     <Header/>
     {info.map((item) => (
-       <div className="offset-1" key = {item.id} >{item.name}</div>))}
+       <div className="offset-1" key = {item.id} >{item.name}
+       {console.log(item)}
+       <img src={item.image}/>
+       
+       </div>))}
 
    <button type="button" className="btn btn-large btn-block btn-default" onClick = {() => {setMouse('on')}}>desayuno</button>
    <div kenu = { mouseClick ? 'on':'off'}></div>
