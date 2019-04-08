@@ -13,7 +13,7 @@ return (arrMenu.filter(item=>item.turn===turn))
 }
 
 const [info,setInfo] = useState([]);  
-const [mouseClick,setMouse] = useState('');
+// const [mouseClick,setMouse] = useState('');
 useEffect(() => {
     fetch('https://raw.githubusercontent.com/JanetGM/LIM008-fe-burger-queen/devJanet/src/database/menu.json')
     .then(resp => resp.json())
@@ -25,12 +25,12 @@ return(
   <div>
     <Header/>
     {info.map((item) => (
-       <div className="offset-1" key = {item.id} >{item.name}
-      <img src={`.img/${item.image}`}/> {console.log(`./img/${item.image}`)}     
-       </div>))}
-      
-   <button type="button" className="btn btn-large btn-block btn-default" onClick = {() => {setMouse('on')}}>desayuno</button>
-   <div kenu = { mouseClick ? 'on':'off'}></div>
+    <div className="offset-1" key = {item.id}>{item.name}    
+    <img src={}/>
+    </div>
+    
+    
+    ))}
    <Menu/>
 
    

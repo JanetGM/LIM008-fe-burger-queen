@@ -64,7 +64,7 @@
     "name":"agua 500ml",
     "category":"bebida-tarde",
     "price":5,
-    "image":"agua500ml",
+    "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/agua500ml.jpg?raw=true",
     "turn":"AfternoonNight"
   },
   {  "id":10,
