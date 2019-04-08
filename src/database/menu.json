@@ -4,7 +4,7 @@
     "name":"café americano",
     "category":"bebida-mañana",
     "price":5.00,
-    "image":"./cafeamericano.jpg",
+    "image":"cafeamericano.jpg",
     "turn":"moorning"
     
   },
@@ -12,21 +12,21 @@
     "name":"cafe con leche",
     "category":"bebida-mañana",
     "price":7.00,
-    "image":"./cafeconleche.jpg",
+    "image":"cafeconleche.jpg",
     "turn":"moorning"
   },
   {  "id":3,
     "name":"sandwich de jamón y queso",
     "category":"sandwich",
     "price":10.00,
-    "image":"./sandwichdejamón.jpg",
+    "image":"sandwichdejamón.jpg",
     "turn":"moorning"
   },
   {  "id":4,
     "name":"Jugo de frutas natural",
     "category":"bebidas-mañana",
     "price":7.00,
-    "image":"./jugodefruta.jpg",
+    "image":"jugodefruta.jpg",
     "turn":"moorning"
   }
   ,
@@ -34,7 +34,7 @@
     "name":"hamburguesa simple",
     "category":"hamburguesa",
     "price":10.00,
-    "image":"./hamburguesasimple.png",
+    "image":"hamburguesasimple.png",
     "type":["res","pollo","vegetariana"],
     "turn":"AfternoonNight"
   },
@@ -42,7 +42,7 @@
     "name":"hamburguesa doble",
     "category":"hamburguesa",
     "price":15.00,
-    "image":"./hamburguesadoble.jpg",
+    "image":"hamburguesadoble.jpg",
     "type":["res","pollo","vegetariana"],
     "turn":"AfternoonNight"
   },
@@ -50,28 +50,28 @@
       "name":"papas fritas",
       "category":"acompañamiento",
       "price":5,
-      "image":"./papasfritas.jpg",
+      "image":"papasfritas.jpg",
       "turn":"AfternoonNight"
   },
   {  "id":8,
     "name":"aros de cebolla",
     "category":"acompañamiento",
     "price":5,
-    "image":"./arosdecebolla.jpg",
+    "image":"arosdecebolla.jpg",
     "turn":"AfternoonNight"
   },
   {  "id":9,
     "name":"agua 500ml",
     "category":"bebida-tarde",
     "price":5,
-    "image":"./agua500ml",
+    "image":"agua500ml",
     "turn":"AfternoonNight"
   },
   {  "id":10,
     "name":"agua 750ml",
     "category":"bebida-tarde",
     "price":7,
-    "image":"./agua750ml.jpg",
+    "image":"agua750ml.jpg",
     "turn":"AfternoonNight"
   },  
   {
@@ -79,7 +79,7 @@
     "name":"bebida/gaseosa 500ml",
     "category":"bebida-tarde",
     "price":7,
-    "image":"./gaseosa500ml",
+    "image":"gaseosa500ml",
     "turn":"AfternoonNight"
   },
   {
@@ -87,7 +87,7 @@
     "name":"bebida/gaseosa 750ml.jpg",
     "category":"bebida-tarde",
     "precio":10,
-    "image":"./gaseosa750ml.jpg",
+    "image":"gaseosa750ml.jpg",
     "turn":"AfternoonNight"
   }
 ]
