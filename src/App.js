@@ -25,7 +25,7 @@ return(
     <Header/>
     {info.map((item) => (
        <div className="offset-1" key = {item.id} >{item.name}
-       {console.log(item)}
+       {console.log(item[0].image)}
        <img src={item.image}/>
        
        </div>))}
