@@ -35,6 +35,7 @@
     "category":"hamburguesa",
     "price":10.00,
     "image":"",
+    "type":["res","pollo","vegetariana"],
     "turn":"AfternoonNight"
   },
   {  "id":6,
@@ -42,6 +43,7 @@
     "category":"hamburguesa",
     "price":15.00,
     "image":"",
+    "type":["res","pollo","vegetariana"],
     "turn":"AfternoonNight"
   },
   {  "id":7,

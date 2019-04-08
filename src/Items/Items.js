@@ -1,18 +1,8 @@
-import React, { Component,useState } from 'react'
+import React, { useState } from 'react';
+import Menu from  '../Menu/Menu';
 
-export class Items extends Component {
-
-
-  render() {
-    let {name,price}=this.props.menu;
-    
-    return (
-      <div>
-        <p>{name}</p>
-        <p>Precio:{price}</p>
-      </div>
-    )
-  }
+export const Items = ({Menu}) =>{
+  return (console.log(Menu))
 }
 
-export default Items;
+

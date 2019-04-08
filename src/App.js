@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,Component} from 'react';
 import './App.css';
-import Aumentar from './pruebaHooks/Aumentar';
-
+import Header from './components/Header.jsx';
+import Menu from './Menu/Menu';
+import Home from './Home/Home'
+// import Aumentar from './pruebaHooks/Aumentar';
 
 const ApiMenu = () => {
-const prove = () =>{
 
+const prove = (arrMenu,turn) => {
+return (arrMenu.filter(item=>item.turn===turn))
 }
+
 const [info,setInfo] = useState([]);  
+const [mouseClick,setMouse] = useState('');
 useEffect(() => {
     fetch('https://raw.githubusercontent.com/JanetGM/LIM008-fe-burger-queen/devJanet/src/database/menu.json')
     .then(resp => resp.json())
@@ -15,16 +20,18 @@ useEffect(() => {
   },[]);
 
 return(
-  <div>{info.map((item,key)=>(
-    <div key ={key}>{item.name}</div>
-  ))}
-    <p>{info.filter(item=> {
-      return(item.id===1)
-    }).map(e=><p>{e.turn}</p>)
-    }</p>
+  
+  <div>
+    <Header/>
+    {info.map((item) => (
+       <div className="offset-1" key = {item.id} >{item.name}</div>))}
 
+   <button type="button" className="btn btn-large btn-block btn-default" onClick = {() => {setMouse('on')}}>desayuno</button>
+   <div kenu = { mouseClick ? 'on':'off'}></div>
+   <Menu/>
+
+   
   </div>
-
 )
 }
 export default ApiMenu;
