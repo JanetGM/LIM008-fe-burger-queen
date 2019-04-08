@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header.jsx';
 import Menu from './Menu/Menu';
 import Home from './Home/Home'
+
 // import Aumentar from './pruebaHooks/Aumentar';
 
 const ApiMenu = () => {
@@ -25,9 +26,9 @@ return(
     <Header/>
     {info.map((item) => (
        <div className="offset-1" key = {item.id} >{item.name}
-      <img src={`."${item.image}"`}/> {console.log(`"src/.${item.image}"`)}     
+      <img src={`.img/${item.image}`}/> {console.log(`./img/${item.image}`)}     
        </div>))}
-
+      
    <button type="button" className="btn btn-large btn-block btn-default" onClick = {() => {setMouse('on')}}>desayuno</button>
    <div kenu = { mouseClick ? 'on':'off'}></div>
    <Menu/>
