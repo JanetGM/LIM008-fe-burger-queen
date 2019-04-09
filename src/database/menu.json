@@ -19,14 +19,14 @@
     "name":"sandwich de jamón y queso",
     "category":"sandwich",
     "price":10.00,
-    "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/sandwwichdejamón.jpg?raw=true",
+    "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/sandwwichdejamon.jpg?raw=true",
     "turn":"moorning"
   },
   {  "id":4,
     "name":"Jugo de frutas natural",
     "category":"bebidas-mañana",
     "price":7.00,
-    "image":"jugodefruta.jpg",
+    "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/jugodefruta.jpg?raw=true",
     "turn":"moorning"
   }
   ,
@@ -79,7 +79,7 @@
     "name":"bebida/gaseosa 500ml",
     "category":"bebida-tarde",
     "price":7,
-    "image":"gaseosa500ml",
+    "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/gaseosa500ml.jpg?raw=true",
     "turn":"AfternoonNight"
   },
   {
