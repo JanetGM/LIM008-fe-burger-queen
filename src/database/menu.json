@@ -19,7 +19,7 @@
     "name":"sandwich de jamón y queso",
     "category":"sandwich",
     "price":10.00,
-    "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/sandwwichdejamon.jpg?raw=true",
+    "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/sandwichdejamon.jpg?raw=true",
     "turn":"moorning"
   },
   {  "id":4,
