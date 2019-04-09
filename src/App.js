@@ -2,9 +2,8 @@ import React, { useEffect, useState ,Component} from 'react';
 import './App.css';
 import Header from './components/Header.jsx';
 import Menu from './Menu/Menu';
-import Home from './Home/Home'
-
-// import Aumentar from './pruebaHooks/Aumentar';
+import Home from './Home/Home';
+import LoadDataMenu from './components/LoadDataMenu.js';
 
 const ApiMenu = () => {
 
@@ -13,7 +12,8 @@ return (arrMenu.filter(item=>item.turn===turn))
 }
 
 const [info,setInfo] = useState([]);  
-// const [mouseClick,setMouse] = useState('');
+
+
 useEffect(() => {
     fetch('https://raw.githubusercontent.com/JanetGM/LIM008-fe-burger-queen/devJanet/src/database/menu.json')
     .then(resp => resp.json())
@@ -23,15 +23,11 @@ useEffect(() => {
 return(
   
   <div>
-    <Header/>
-    {info.map((item) => (
-    <div className="offset-1" key = {item.id}>{item.name}    
-    <img src={}/>
-    </div>
-    
-    
-    ))}
-   <Menu/>
+   <Header/>
+    <div>    
+    <LoadDataMenu info={info} setInfo={setInfo}/>
+    <button onClick={()=>{(prove(info,'moorning')).map(e=><label>{e.name}</label>)}}>desayuno</button> 
+    </div>    
 
    
   </div>

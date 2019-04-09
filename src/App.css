@@ -7,6 +7,12 @@
   height: 40vmin;
   pointer-events: none;
 }
+/*LoadDataMenu*/
+.cardMenu{
+  background-color: rgb(193, 221, 217);
+  width: 200px;
+  height: 40px;
+}
 
 .App-header {
   background-color: #282c34;
