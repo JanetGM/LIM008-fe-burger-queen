@@ -13,7 +13,10 @@
   width: 200px;
   height: 40px;
 }
-
+.cardImage{
+  width: 90px;
+  height: 90px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
