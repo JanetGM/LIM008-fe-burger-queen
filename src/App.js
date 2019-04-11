@@ -1,20 +1,22 @@
 import React, { useEffect, useState ,Component} from 'react';
 import './App.css';
 import Header from './components/Header.jsx';
-import Menu from './components/Menu';
 import LoadDataMenu from './components/LoadDataMenu.js';
 import Filterdata from './components/Filterdata';
 import TablePedido from './components/TablePedido';
 const ApiMenu = () => {
 //ESTADOS-------------
 const [info,setInfo] = useState([]);  
-
-const [opcionfiltro,setOpcionFiltro] = useState({filtro:'moorning'});
+const [pedido,setPedido] = useState([]);
+const [opcionfiltro,setOpcionFiltro] = useState('moorning');
 
 //FUNCIONES--------------------
 
 const checkClick = (option) => setOpcionFiltro(option)
 
+const AddItem = (id)=>{
+    setPedido([...pedido,id])
+ }
 
 //FETCH JSON MENU
 useEffect(() => {
@@ -23,22 +25,23 @@ useEffect(() => {
     .then(data => setInfo(data.concat(info)))
   },[]);
 
+
 //MOSTRAR EN PANTALLA
 return(
   
   <div>
    <Header/>
+   <Filterdata  onClick={checkClick} opcionFiltro={opcionfiltro} info={info}/>
     <div className="row">
       <div className="col">
-          <Filterdata filtro={opcionfiltro.filtro} on={checkClick} info={info}/>
-          <LoadDataMenu info={info} setInfo={setInfo}/>
+          <LoadDataMenu info={info} additem={AddItem} />
       </div>
-      <div className="col">
-    
-     
+       <div className="col">
+       <TablePedido newstate={pedido} setstate={setPedido}/>
       </div>   
     </div>      
   </div>
+  
 )
 }
 export default ApiMenu;
