@@ -29,10 +29,20 @@
   color: white;
 }
 .fondo{
-  background-color: #282c34;
+  background-color: white;
 }
 .App-link {
   color: #61dafb;
+}
+.header-menu{
+
+  height: 100px;
+}
+.menu-tag{
+  font-size: 30px;
+  margin-left: 20px;
+  background-color: #33AA95;
+  padding: 25px;
 }
 
 @keyframes App-logo-spin {
