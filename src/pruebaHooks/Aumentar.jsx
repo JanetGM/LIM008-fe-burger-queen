@@ -1,6 +1,6 @@
-import React , {useState} from 'react';
-export default function Aumentar () {
-    const [count,setCount] = useState(0);
+import React from 'react';
+
+const Aumentar = () => {
     return(
         <div>
             <p>dsadsa{count}</p>
@@ -9,3 +9,4 @@ export default function Aumentar () {
             </div>
     )
 }
+export default Aumentar ;

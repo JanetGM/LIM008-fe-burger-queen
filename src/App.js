@@ -5,17 +5,23 @@ import './App.css';
 import { LoadDataMenu } from './components/LoadDataMenu';
 import Filterdata from './components/Filterdata';
 import TablePedido from './components/TablePedido';
+import HeaderTable from './components/HeaderTable';
 
 const ApiMenu = () => {
 //  ESTADOS-------------
   const [info, setInfo] = useState([]);
   const [pedido, setPedido] = useState([]);
   const [option, setOption] = useState('moorning');
+  const [count, setCount] = useState(1);
   //  FUNCIONES--------------------
 
-  const AddItem = (id) => {
-    setPedido([...pedido, id]);
+  const AddItem = (producto, pedido) => {
+    const productoPedido = pedido.find(e => e.id === producto.id);
+     (productoPedido)?setPedido([...pedido]): setPedido([ ...pedido,producto]);
   };
+console.log(pedido);
+
+
 
   //  FETCH JSON MENU
   useEffect(() => {
@@ -31,10 +37,11 @@ const ApiMenu = () => {
       <Filterdata info={info} option={option} setoption={setOption} />
       <div className="row">
         <div className="col-5">
-          <LoadDataMenu info={info} additem={AddItem} />
+          <LoadDataMenu info={info} additem={AddItem} pedido={pedido} />
         </div>
         <div className="col-7 container">
-          <TablePedido newstate={pedido} setstate={setPedido} />
+          <HeaderTable />
+          <TablePedido newstate={pedido} setstate={setPedido} count={count} setCount={setCount} />
         </div>
       </div>
     </div>
