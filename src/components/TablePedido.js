@@ -5,12 +5,10 @@ import React from 'react';
 // eslint-disable-next-line import/prefer-default-export
 const TablePedido = ({ newstate, setstate }) => {
   const disminuir = (e) => {
-    e.cantidad += 1;
-    setstate([...newstate]);
+    e.cantidad -= 1;
   };
   const aumentar = (e) => {
     e.cantidad += 1;
-    setstate([...newstate]);
   };
   const deleteItem = (id) => {
     const filterdata = newstate.filter(e => e.id !== id);
@@ -18,17 +16,11 @@ const TablePedido = ({ newstate, setstate }) => {
   };
   return (newstate.map(e => (
     <div>
-      <table className="table table-bordered table-hover">
-        <th>{ e.name }</th>    
-        <th>
-         <label>{ e.count }</label>
-        <button type="button" onClick={() => disminuir(e)}>+</button>
-        <button type="button" onClick={() => aumentar(e)}>-</button>
-        </th>
-        <th>
-        <button type="button" onClick={() => deleteItem(e.id)}><i className="fas fa-trash" /></button>
-       </th>
-      </table> 
+      <span>{e.name}</span>
+      <span>{ e.cantidad }</span>
+      <button type="button" onClick={() => aumentar(e)}>+</button>
+      <button type="button" onClick={() => disminuir(e)}>-</button>
+      <button type="button" onClick={() => deleteItem(e.id)}><i className="fas fa-trash" /></button>
     </div>
   )));
 };

@@ -15,11 +15,11 @@ const ApiMenu = () => {
   const [count, setCount] = useState(1);
   //  FUNCIONES--------------------
 
-  const AddItem = (producto, pedido) => {
-    const productoPedido = pedido.find(e => e.id === producto.id);
-     (productoPedido)?setPedido([...pedido]): setPedido([ ...pedido,producto]);
+  const AddItem = (producto, data) => {
+    const productodata = data.find(e => e.id === producto.id);
+     (productodata)?setPedido([...data]): setPedido([...data,producto]);
   };
-console.log(pedido);
+
 
 
 

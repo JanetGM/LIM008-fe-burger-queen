@@ -5,7 +5,9 @@
     "category":"bebida-mañana",
     "price":5.00,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/cafeamericano.jpg?raw=true",
-    "turn":"moorning"
+    "turn":"moorning",
+    "cantidad":0
+
     
   },
   {  "id":2,
@@ -13,21 +15,26 @@
     "category":"bebida-mañana",
     "price":7.00,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/cafeconleche.jpg?raw=true",
-    "turn":"moorning"
+    "turn":"moorning",
+    "cantidad":0
+
   },
   {  "id":3,
     "name":"sandwich de jamón y queso",
     "category":"sandwich",
     "price":10.00,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/sandwichdejamon.jpg?raw=true",
-    "turn":"moorning"
+    "turn":"moorning",
+    "cantidad":0
+
   },
   {  "id":4,
     "name":"Jugo de frutas natural",
     "category":"bebidas-mañana",
     "price":7.00,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/jugodefruta.jpg?raw=true",
-    "turn":"moorning"
+    "turn":"moorning",
+    "cantidad":0
   }
   ,
   {  "id":5,
@@ -36,7 +43,8 @@
     "price":10.00,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/hamburguesasimple.png?raw=true",
     "type":["res","pollo","vegetariana"],
-    "turn":"AfternoonNight"
+    "turn":"AfternoonNight",
+    "cantidad":0
   },
   {  "id":6,
     "name":"hamburguesa doble",
@@ -44,7 +52,8 @@
     "price":15.00,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/hamburguesadoble.jpg?raw=true",
     "type":["res","pollo","vegetariana"],
-    "turn":"AfternoonNight"
+    "turn":"AfternoonNight",
+    "cantidad":0
   },
   {  "id":7,
       "name":"papas fritas",
@@ -52,27 +61,32 @@
       "price":5,
       "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/papasfritas.jpg?raw=true",
       "turn":"AfternoonNight"
+,
+"cantidad":0
   },
   {  "id":8,
     "name":"aros de cebolla",
     "category":"acompañamiento",
     "price":5,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/arosdecebolla.jpg?raw=true",
-    "turn":"AfternoonNight"
+    "turn":"AfternoonNight",
+    "cantidad":0
   },
   {  "id":9,
     "name":"agua 500ml",
     "category":"bebida-tarde",
     "price":5,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/agua500ml.jpg?raw=true",
-    "turn":"AfternoonNight"
+    "turn":"AfternoonNight",
+    "cantidad":0
   },
   {  "id":10,
     "name":"agua 750ml",
     "category":"bebida-tarde",
     "price":7,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/agua750ml.jpg?raw=true",
-    "turn":"AfternoonNight"
+    "turn":"AfternoonNight",
+    "cantidad":0
   },  
   {
     "id":11,
@@ -80,7 +94,8 @@
     "category":"bebida-tarde",
     "price":7,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/gaseosa500ml.jpg?raw=true",
-    "turn":"AfternoonNight"
+    "turn":"AfternoonNight",
+    "cantidad":0
   },
   {
     "id":12,
@@ -88,6 +103,7 @@
     "category":"bebida-tarde",
     "precio":10,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/gaseosa750ml.jpg?raw=true",
-    "turn":"AfternoonNight"
+    "turn":"AfternoonNight",
+    "cantidad":0
   }
 ]
