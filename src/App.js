@@ -12,16 +12,12 @@ const ApiMenu = () => {
   const [info, setInfo] = useState([]);
   const [pedido, setPedido] = useState([]);
   const [option, setOption] = useState('moorning');
-  const [count, setCount] = useState(1);
   //  FUNCIONES--------------------
 
   const AddItem = (producto, data) => {
     const productodata = data.find(e => e.id === producto.id);
-     (productodata)?setPedido([...data]): setPedido([...data,producto]);
+    (productodata) ? setPedido([...data]): setPedido([...data,producto]);
   };
-
-
-
 
   //  FETCH JSON MENU
   useEffect(() => {
@@ -29,7 +25,6 @@ const ApiMenu = () => {
       .then(resp => resp.json())
       .then(data => setInfo(data.concat(info)));
   }, []);
-
 
   //  MOSTRAR EN PANTALLA
   return (
@@ -41,7 +36,7 @@ const ApiMenu = () => {
         </div>
         <div className="col-7 container">
           <HeaderTable />
-          <TablePedido newstate={pedido} setstate={setPedido} count={count} setCount={setCount} />
+          <TablePedido pedido={pedido} setpedido={setPedido} />
         </div>
       </div>
     </div>

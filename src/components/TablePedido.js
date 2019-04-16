@@ -3,25 +3,71 @@
 import React from 'react';
 
 // eslint-disable-next-line import/prefer-default-export
-const TablePedido = ({ newstate, setstate }) => {
-  const disminuir = (e) => {
-    e.cantidad -= 1;
-  };
-  const aumentar = (e) => {
-    e.cantidad += 1;
+const TablePedido = ({ pedido, setpedido }) => {
+  const modifyStatePedido = (item, index) => {
+    const copyArrPedido = [...pedido];
+    copyArrPedido[index] = item;
+    setpedido(copyArrPedido);
   };
   const deleteItem = (id) => {
-    const filterdata = newstate.filter(e => e.id !== id);
-    setstate([...filterdata]);
+    const filterdata = pedido.filter(e => e.id !== id);
+    setpedido([...filterdata]);
   };
-  return (newstate.map(e => (
+  const calculateTotalAmout = (cantidad, price) => {
+    const arrSubTotal = [];
+    arrSubTotal.push(cantidad * price);
+    arrSubTotal.reduce((a, b) => a + b);
+    return cantidad * price;
+  };
+
+  return (
     <div>
-      <span>{e.name}</span>
-      <span>{ e.cantidad }</span>
-      <button type="button" onClick={() => aumentar(e)}>+</button>
-      <button type="button" onClick={() => disminuir(e)}>-</button>
-      <button type="button" onClick={() => deleteItem(e.id)}><i className="fas fa-trash" /></button>
+      <table className="table table-hover" id="table-pedido">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        {pedido.length === 0 ? null : (
+          pedido.map((e, index) => (
+            <tr key={e.id}>
+              <td>{e.name}</td>
+              <td>{`$ ${e.price}`}</td>
+              <td>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const dataPedido = { ...e };
+                    dataPedido.cantidad += 1;
+                    modifyStatePedido(dataPedido, index);
+                  }}
+>
++ 
+               </button>
+                {e.cantidad}
+                <button type="button" 
+                  onClick={() => {
+                    const dataPedido = { ...e };
+                    dataPedido.cantidad -= 1;
+                    modifyStatePedido(dataPedido, index);
+                  }}
+>
+-
+                </button>
+              </td>
+              <td>
+                {calculateTotalAmout(e.cantidad, e.price)}
+              </td>
+              <td>
+                <button type="button" onClick={() => deleteItem(e.id)}><i className="fas fa-trash" /></button>
+              </td>
+            </tr>
+          )))} 
+      </table>
     </div>
-  )));
+  );
 };
 export default TablePedido;
