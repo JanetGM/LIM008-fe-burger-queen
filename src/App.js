@@ -5,20 +5,27 @@ import './App.css';
 import { LoadDataMenu } from './components/LoadDataMenu';
 import Filterdata from './components/Filterdata';
 import TablePedido from './components/TablePedido';
-import HeaderTable from './components/HeaderTable';
+import addNewPedido from './database/saveinFirebase';
+import SavePedido from './components/Pedido';
+
+// addNewPedido( 'Betsy', '19/03/17', { items: ['MANGO', 'MARACUYA'] }, 'gutmont', 3.00);
 
 const ApiMenu = () => {
+
 //  ESTADOS-------------
   const [info, setInfo] = useState([]);
   const [pedido, setPedido] = useState([]);
   const [option, setOption] = useState('moorning');
-  //  FUNCIONES--------------------
 
+  //  FUNCIONES--------------------
   const AddItem = (producto, data) => {
     const productodata = data.find(e => e.id === producto.id);
-    (productodata) ? setPedido([...data]): setPedido([...data,producto]);
+    if (productodata) {
+      setPedido([...pedido]);
+    } else {
+      setPedido([...pedido, producto]); 
+    }
   };
-
   //  FETCH JSON MENU
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/JanetGM/LIM008-fe-burger-queen/devJanet/src/database/menu.json')
@@ -29,14 +36,14 @@ const ApiMenu = () => {
   //  MOSTRAR EN PANTALLA
   return (
     <div>
-      <Filterdata info={info} option={option} setoption={setOption} />
+      <Filterdata info={info} option={option} setOption={setOption} />
       <div className="row">
         <div className="col-5">
-          <LoadDataMenu info={info} additem={AddItem} pedido={pedido} />
+          <LoadDataMenu info={info} additem={AddItem} pedido={pedido} option={option} />
         </div>
         <div className="col-7 container">
-          <HeaderTable />
           <TablePedido pedido={pedido} setpedido={setPedido} />
+          <SavePedido pedido={pedido} addPedido={addNewPedido} />
         </div>
       </div>
     </div>

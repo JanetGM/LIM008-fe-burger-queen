@@ -1,10 +1,9 @@
 import React from 'react';
 
-export const Menu = ({ mouse, setMouse }) => (
+export const Menu = () => (
   <div className="">
-    <button type="button" className="offset-1" onClick={() => { console.log('eva') ;}}>Desayuno</button>
-    <button type="button" className="offset-1">Dinner</button>
-    <p>{mouse}</p>
+    <button type="button" className="offset-1">Desayuno</button>
+    <button type="button" className="offset-1">Rest Day</button>
   </div>
 );
 export default Menu;

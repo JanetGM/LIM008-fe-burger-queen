@@ -1,9 +1,8 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/require-default-props */
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line import/prefer-default-export
-const TablePedido = ({ pedido, setpedido }) => {
+const TablePedido = ({ pedido, setpedido}) => {
   const modifyStatePedido = (item, index) => {
     const copyArrPedido = [...pedido];
     copyArrPedido[index] = item;
@@ -13,13 +12,11 @@ const TablePedido = ({ pedido, setpedido }) => {
     const filterdata = pedido.filter(e => e.id !== id);
     setpedido([...filterdata]);
   };
-  const calculateTotalAmout = (cantidad, price) => {
-    const arrSubTotal = [];
-    arrSubTotal.push(cantidad * price);
-    arrSubTotal.reduce((a, b) => a + b);
-    return cantidad * price;
-  };
-
+  const calculateTotalAmout = (arrPedido) => {
+    return arrPedido.reduce((accum, elem) => { 
+      return accum + (elem.quantity * elem.price);
+    }, 0);
+  }; 
   return (
     <div>
       <table className="table table-hover" id="table-pedido">
@@ -41,17 +38,15 @@ const TablePedido = ({ pedido, setpedido }) => {
                   type="button"
                   onClick={() => {
                     const dataPedido = { ...e };
-                    dataPedido.cantidad += 1;
+                    dataPedido.quantity += 1;
                     modifyStatePedido(dataPedido, index);
                   }}
 >
-+ 
-               </button>
++
+                </button>
                 {e.cantidad}
-                <button type="button" 
-                  onClick={() => {
-                    const dataPedido = { ...e };
-                    dataPedido.cantidad -= 1;
+                <button type="button" onClick={() => { const dataPedido = { ...e };
+                    dataPedido.quantity -= 1;
                     modifyStatePedido(dataPedido, index);
                   }}
 >
@@ -59,7 +54,7 @@ const TablePedido = ({ pedido, setpedido }) => {
                 </button>
               </td>
               <td>
-                {calculateTotalAmout(e.cantidad, e.price)}
+                {e.quantity * e.price}
               </td>
               <td>
                 <button type="button" onClick={() => deleteItem(e.id)}><i className="fas fa-trash" /></button>
@@ -67,7 +62,13 @@ const TablePedido = ({ pedido, setpedido }) => {
             </tr>
           )))} 
       </table>
+      <p>{ `$ ${calculateTotalAmout(pedido)}` }</p>
     </div>
   );
 };
 export default TablePedido;
+
+TablePedido.propTypes = {
+  pedido: PropTypes.arrayOf(Object).isRequired,
+  setpedido: PropTypes.func.isRequired,
+};
