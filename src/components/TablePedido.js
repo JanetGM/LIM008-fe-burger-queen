@@ -2,14 +2,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TablePedido = ({ pedido, setpedido}) => {
+const TablePedido = ({ pedido, setpedido }) => {
   const modifyStatePedido = (item, index) => {
     const copyArrPedido = [...pedido];
     copyArrPedido[index] = item;
     setpedido(copyArrPedido);
   };
   const deleteItem = (id) => {
-    const filterdata = pedido.filter(e => e.id !== id);
+    const arrPedido = pedido;
+    const filterdata = arrPedido.filter(e => e.id !== id);
     setpedido([...filterdata]);
   };
   const calculateTotalAmout = (arrPedido) => {
@@ -28,41 +29,46 @@ const TablePedido = ({ pedido, setpedido}) => {
             <th>Subtotal</th>
           </tr>
         </thead>
+        <tbody>
         {pedido.length === 0 ? null : (
           pedido.map((e, index) => (
-            <tr key={e.id}>
-              <td>{e.name}</td>
-              <td>{`$ ${e.price}`}</td>
-              <td>
-                <button
-                  type="button"
-                  onClick={() => {
-                    const dataPedido = { ...e };
-                    dataPedido.quantity += 1;
-                    modifyStatePedido(dataPedido, index);
-                  }}
+              <tr key={e.id}>
+                <td>{e.name}</td>
+                <td>{`$ ${e.price}`}</td>
+                <td>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const dataPedido = { ...e };
+                      dataPedido.quantity += 1;
+                      modifyStatePedido(dataPedido, index);
+                    }}
 >
 +
                 </button>
-                {e.cantidad}
-                <button type="button" onClick={() => { const dataPedido = { ...e };
-                    dataPedido.quantity -= 1;
-                    modifyStatePedido(dataPedido, index);
-                  }}
+                  {e.quantity}
+                  <button 
+                    type="button" 
+                    onClick={() => { 
+                      const dataPedido = { ...e };
+                      dataPedido.quantity -= 1;
+                      modifyStatePedido(dataPedido, index);
+                    }}
 >
 -
                 </button>
-              </td>
-              <td>
-                {e.quantity * e.price}
-              </td>
-              <td>
-                <button type="button" onClick={() => deleteItem(e.id)}><i className="fas fa-trash" /></button>
-              </td>
-            </tr>
+                </td>
+                <td>
+                  {e.quantity * e.price}
+                </td>
+                <td>
+                  <button type="button" onClick={() => deleteItem(e.id)} data-testid={`${e.id}-delete`}><i className="fas fa-trash" /></button>
+                </td>
+              </tr>
           )))} 
+        </tbody>
       </table>
-      <p>{ `$ ${calculateTotalAmout(pedido)}` }</p>
+      <p  data-testid={`total-id`}>{ `$ ${calculateTotalAmout(pedido)}`}</p>
     </div>
   );
 };

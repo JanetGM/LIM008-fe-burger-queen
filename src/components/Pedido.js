@@ -5,7 +5,7 @@ const SavePedido = ({ pedido, addPedido }) => {
   const [text, setText] = useState('');
   return (
     <div>
-      <input type="text" value={text} onChange={e => setText(e.target.value)} />
+      <input type="text" value={text} onChange={e => setText(e.target.value)} data-testid="txt-name" />
       <button type="button" className="btn btn-primary" onClick={() => addPedido(text, pedido)}>Enviar a cocina </button>
     </div>
   );
