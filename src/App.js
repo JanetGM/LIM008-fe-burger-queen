@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/jsx-filename-extension */
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './App.css';
 import { LoadDataMenu } from './components/LoadDataMenu';
 import Filterdata from './components/Filterdata';
@@ -14,7 +15,7 @@ const ApiMenu = () => {
   //  ESTADOS-------------
   const [info, setInfo] = useState([]);
   const [pedido, setPedido] = useState([]);
-  const [option, setOption] = useState('moorning');
+  const [option, setOption] = useState('morning');
 
   //  FUNCIONES--------------------
   const AddItem = (producto, data) => {
@@ -29,8 +30,7 @@ const ApiMenu = () => {
   };
   //  FETCH JSON MENU
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/JanetGM/LIM008-fe-burger-queen/devJanet/src/database/menu.json')
-      .then(resp => resp.json())
+    axios('https://raw.githubusercontent.com/JanetGM/LIM008-fe-burger-queen/devJanet/src/database/menu.json')
       .then(data => setInfo(data.concat(info)));
   }, []);
 

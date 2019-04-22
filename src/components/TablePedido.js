@@ -29,7 +29,7 @@ const TablePedido = ({ pedido, setpedido }) => {
             <th>Subtotal</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody data-testid="item-pedido-list">
         {pedido.length === 0 ? null : (
           pedido.map((e, index) => (
               <tr key={e.id}>
