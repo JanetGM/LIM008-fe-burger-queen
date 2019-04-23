@@ -31,7 +31,7 @@ const ApiMenu = () => {
   //  FETCH JSON MENU
   useEffect(() => {
     axios('https://raw.githubusercontent.com/JanetGM/LIM008-fe-burger-queen/devJanet/src/database/menu.json')
-      .then(data => setInfo(data.concat(info)));
+      .then(arrObj => setInfo(arrObj.data));
   }, []);
 
   //  MOSTRAR EN PANTALLA

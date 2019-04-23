@@ -1,15 +1,15 @@
 {
-  "main.css": "/JanetGM/LIM008-fe-burger-queen/static/css/main.30063f80.chunk.css",
-  "main.js": "/JanetGM/LIM008-fe-burger-queen/static/js/main.c551bfba.chunk.js",
-  "main.js.map": "/JanetGM/LIM008-fe-burger-queen/static/js/main.c551bfba.chunk.js.map",
-  "runtime~main.js": "/JanetGM/LIM008-fe-burger-queen/static/js/runtime~main.8b4f2692.js",
-  "runtime~main.js.map": "/JanetGM/LIM008-fe-burger-queen/static/js/runtime~main.8b4f2692.js.map",
-  "static/css/2.5d78c1e3.chunk.css": "/JanetGM/LIM008-fe-burger-queen/static/css/2.5d78c1e3.chunk.css",
-  "static/js/2.085de7bf.chunk.js": "/JanetGM/LIM008-fe-burger-queen/static/js/2.085de7bf.chunk.js",
-  "static/js/2.085de7bf.chunk.js.map": "/JanetGM/LIM008-fe-burger-queen/static/js/2.085de7bf.chunk.js.map",
-  "index.html": "/JanetGM/LIM008-fe-burger-queen/index.html",
-  "precache-manifest.6052fdf37ed758e7fbcee3a78dce6ba6.js": "/JanetGM/LIM008-fe-burger-queen/precache-manifest.6052fdf37ed758e7fbcee3a78dce6ba6.js",
-  "service-worker.js": "/JanetGM/LIM008-fe-burger-queen/service-worker.js",
-  "static/css/2.5d78c1e3.chunk.css.map": "/JanetGM/LIM008-fe-burger-queen/static/css/2.5d78c1e3.chunk.css.map",
-  "static/css/main.30063f80.chunk.css.map": "/JanetGM/LIM008-fe-burger-queen/static/css/main.30063f80.chunk.css.map"
+  "main.css": "/static/css/main.30063f80.chunk.css",
+  "main.js": "/static/js/main.a6401425.chunk.js",
+  "main.js.map": "/static/js/main.a6401425.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/css/2.5d78c1e3.chunk.css": "/static/css/2.5d78c1e3.chunk.css",
+  "static/js/2.9e0b73f8.chunk.js": "/static/js/2.9e0b73f8.chunk.js",
+  "static/js/2.9e0b73f8.chunk.js.map": "/static/js/2.9e0b73f8.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.ac4e5b21e9b3f312870da0186e9ac2f2.js": "/precache-manifest.ac4e5b21e9b3f312870da0186e9ac2f2.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/2.5d78c1e3.chunk.css.map": "/static/css/2.5d78c1e3.chunk.css.map",
+  "static/css/main.30063f80.chunk.css.map": "/static/css/main.30063f80.chunk.css.map"
 }
