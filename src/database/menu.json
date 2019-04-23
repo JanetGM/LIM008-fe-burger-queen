@@ -101,7 +101,7 @@
     "id":12,
     "name":"bebida/gaseosa 750ml.jpg",
     "category":"bebida-tarde",
-    "precio":10,
+    "price":10,
     "image":"https://github.com/JanetGM/LIM008-fe-burger-queen/blob/devJanet/src/img/gaseosa750ml.jpg?raw=true",
     "type":"rest-day",
     "quantity":1
