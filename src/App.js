@@ -39,10 +39,14 @@ const ApiMenu = () => {
     <div>
       <Filterdata info={info} option={option} setOption={setOption} />
       <div className="row">
-        <div className="col-md-5">
-          <LoadDataMenu info={info} additem={AddItem} pedido={pedido} option={option} />
+        <div className="col-md-7">
+          <div className="container-flex">
+            <div className="card-columns">
+              <LoadDataMenu info={info} additem={AddItem} pedido={pedido} option={option} />
+            </div>
+          </div>
         </div>
-        <div className="col-md-7 container">
+        <div className="col-md-5 container">
           <TablePedido pedido={pedido} setpedido={setPedido} />
           <SavePedido pedido={pedido} addPedido={addNewPedido} />
         </div>
